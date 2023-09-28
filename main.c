@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <math.h>
+#include "Maior.h"
+#include "Menor.h"
+#include "Soma.h"
 
 #define tamanho 10
-
-int Soma(float* v,float tam);
-double Menor( float* v, int tam);
-float Maior(float* v, float tam);
 
 int main (){
 float array[tamanho];
@@ -23,36 +22,5 @@ printf("Maior valor do array %f\n",Maior(array, tamanho));
 return 0;
 }
 
-
-int Soma(float* v,float tam){
-	float valor = 0;
-	for(int i = 0; i<tam; i++){
-	valor += v[i];
-	}
-	
-	return valor;
-
-}
-
-double Menor(float* v, int tam){
-	float valor = 100000;
-	for(int i = 0; i<tam; i++){
-	if(v[i] < valor)
-	valor  = v[i];
-	}
-	
-	return valor;
-
-}
-
-float Maior(float* v, float tam){
-	float valor = 0;
-	for(int i = 0; i<tam; i++){
-	if(v[i] > valor)
-	valor  = v[i];
-	}
-	
-	return valor;
-}
 
 
